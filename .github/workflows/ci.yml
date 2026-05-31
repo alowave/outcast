@@ -1,0 +1,125 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v42
+        with:
+          files: |
+            **/*.py
+
+      - name: Set up Python
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: uav-sim-env
+          environment-file: environment.yml
+          auto-activate-base: false
+          use-mamba: true
+
+      - name: Run Ruff and Build Report
+        if: steps.changed-files.outputs.any_changed == 'true'
+        id: ruff_logic
+        run: |
+          COMMENT_BODY=""
+          ANY_FAILURES=false
+          
+          # Loop through each changed file to get granular reports
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            # Run ruff on the specific file
+            LINT_OUT=$(ruff check "$file" 2>&1 || true)
+            
+            # Only add to comment if there are actual issues
+            if [[ "$LINT_OUT" == *"*"* ]] || [ -n "$LINT_OUT" ]; then
+              # Ruff usually outputs "All checks passed" if clean; we check for actual error content
+              if ! ruff check "$file" > /dev/null 2>&1; then
+                ANY_FAILURES=true
+                COMMENT_BODY+=$'**`'"$file"'`**\n<details><summary>View Details</summary>\n\n```text\n'"$LINT_OUT"$' \n```\n</details>\n\n'
+              fi
+            fi
+          done
+
+          # Run the format check
+          FORMAT_OUT=$(ruff format --check . 2>&1 || true)
+          if [[ "$FORMAT_OUT" == *"would be"* ]]; then
+            ANY_FAILURES=true
+            COMMENT_BODY+=$'### ❌ Formatting Issues Found\n\n<details><summary>View Details</summary>\n\n```text\n'"$FORMAT_OUT"$' \n```\n</details>\n\n'
+          fi
+
+          # Define whether the overall status is a pass or fail
+          if [ "$ANY_FAILURES" = "true" ]; then
+            HEADER="### ❌ Issues Found (Linting or Formatting)\n\n"
+            echo "status=fail" >> $GITHUB_OUTPUT
+          else
+            HEADER="### ✅ No Issues Found (Linting and Formatting)"
+            echo "status=pass" >> $GITHUB_OUTPUT
+          fi
+
+          # Export the full body using a multiline delimiter
+          {
+            echo "COMMENT_BODY<<EOF"
+            echo -e "$HEADER$COMMENT_BODY"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          
+          # Write the full report to the summary page
+          {
+            echo -e "$HEADER$COMMENT_BODY"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Post Comment
+        if: github.event_name == 'pull_request' && steps.changed-files.outputs.any_changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: ${{ steps.ruff_logic.outputs.COMMENT_BODY }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "$BODY"
+
+      - name: Force Failure if Linting or Formatting Failed
+        if: steps.ruff_logic.outputs.status == 'fail'
+        run: |
+          exit 1
+
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: uav-sim-env
+          environment-file: environment.yml
+          auto-activate-base: false
+          use-mamba: true
+
+      - name: Run Pytest
+        shell: bash -l {0}
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest

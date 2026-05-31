@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312" # Set your specific version
+
+[tool.ruff.lint]
+# E/F = standard flake8, I = isort (import sorting)
+select = ["E", "F", "I"]
+# Add E501 here because the Formatter handles layout
+ignore = ["E501"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+# These settings make Ruff a 1:1 replacement for Black
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false

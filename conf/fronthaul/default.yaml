@@ -1,0 +1,44 @@
+channel_model_a2g: 0  # 0 - PLOS (Probabilistic Line-of-Sight)
+channel_model_g2g: 0  # 0 - UMa (Urban Macro)
+frequency_hz_a2g: 2020000000.0  # Carrier frequency for A2G links in Hz
+frequency_hz_g2g: 2000000000.0  # Carrier frequency for G2G links in Hz
+tx_power_dbm_a2g: -6.9897000433601875  # Transmit power for A2G links in dBm
+tx_power_dbm_g2g: 46.0  # Transmit power for G2G links in dBm
+user_bandwidth_hz: 500000.0  # Assigned bandwidth per user in Hz
+drone_bandwidth_hz: 20000000.0  # Total available bandwidth per drone in Hz
+noise_spectral_density_dbm_per_hz: -174.0  # Noise spectral density in dBm/Hz
+sinr_threshold_db: 25.0  # SINR threshold for successful connection in dB
+coverage_history_window: 100
+channel:
+  env_type: Urban
+  default_ue_height_m: 1.5
+  default_bs_height_m: 25.0
+  default_uav_height_m: 50.0
+  plos:
+    env_profiles:
+      Suburban: [0.1, 750.0, 8.0]
+      Urban: [0.3, 500.0, 15.0]
+      Dense Urban: [0.5, 300.0, 20.0]
+      Highrise Urban: [0.5, 300.0, 50.0]
+    avg_loss_profiles:
+      Suburban:
+        - [700000000.0, 100000000.0, 0.0, 18.0]
+        - [2000000000.0, 250000000.0, 0.1, 21.0]
+        - [5800000000.0, 1000000000.0, 0.2, 24.0]
+      Urban:
+        - [700000000.0, 100000000.0, 0.6, 17.0]
+        - [2000000000.0, 250000000.0, 1.0, 20.0]
+        - [5800000000.0, 1000000000.0, 1.2, 23.0]
+      Dense Urban:
+        - [700000000.0, 100000000.0, 1.0, 20.0]
+        - [2000000000.0, 250000000.0, 1.6, 23.0]
+        - [5800000000.0, 1000000000.0, 1.8, 23.0]
+      Highrise Urban:
+        - [700000000.0, 100000000.0, 1.5, 29.0]
+        - [2000000000.0, 250000000.0, 2.4, 34.0]
+        - [5800000000.0, 1000000000.0, 2.5, 41.0]
+  uma:
+    effective_env_height_mode: expected  # Mode for effective environment height (expected or probabilistic)
+    enable_shadowing: false  # Enable shadowing effects
+    shadowing_los_db: 4.0  # Shadowing standard deviation for LOS in dB
+    shadowing_nlos_db: 6.0  # Shadowing standard deviation for NLOS in dB

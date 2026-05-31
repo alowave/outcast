@@ -1,0 +1,18 @@
+name: uav-sim-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - sympy
+  - matplotlib
+  - hydra-core
+  - ruff=0.15.8
+  - pytest
+  - pytest-benchmark
+  - shapely
+  - pyqtgraph
+  - pyside6
+  - omegaconf

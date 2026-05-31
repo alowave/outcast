@@ -1,0 +1,3 @@
+access_range_m: 500.0  # Maximum access range for UE in meters
+backhaul_range_m: 1000.0  # Maximum backhaul range for BS/UAV in meters
+rng_seed: ${simulation.seed}

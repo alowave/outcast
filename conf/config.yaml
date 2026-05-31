@@ -1,0 +1,151 @@
+defaults:
+  - world@simulation.world: default
+  - load@simulation.load: default
+  - obstacle@simulation.obstacle: default
+  - plot@simulation.plot: default
+  - random_movement@simulation.random_movement: default
+  - link_layer@simulation.link_layer: default
+  - fronthaul@simulation.fronthaul: default
+  - backhaul@simulation.backhaul: default
+  - uav_battery@simulation.uav_battery: default
+  - metrics: default
+  - _self_
+
+scenario_name: city_of_the_sun
+time_step: 1.0
+total_steps: 1000
+
+simulation:
+  seed: 33
+
+# Local overrides:
+# Uncomment and edit any values below to override the imported group defaults.
+#
+# simulation:
+#   seed: 33
+#   world:
+#   n_ues: 200
+#   n_uavs: 20
+#   n_bss: 5
+#   env_boundary: [1000.0, 1000.0]
+#   min_height_uav: 50.0
+#   max_height_uav: 100.0
+#   ue_height: 1.5
+#   bs_height: 25.0
+#   user_model: random_movement
+#
+#   load:
+#   min_random_gn_load: 10000000000
+#   max_random_gn_load: 500000000000
+#
+#   obstacle:
+#   enabled: true
+#   map_title: Poznan
+#   boundary_margin: 20
+#   default_height: 50.0
+#
+#   plot:
+#   enabled: true
+#   uav_trace_enabled: false
+#   uav_trace_max_length: 50
+#
+#   random_movement:
+#   step_range: [-1.0, 1.0]
+#
+#   link_layer:
+#   access_range_m: 500.0
+#   backhaul_range_m: 1000.0
+#   rng_seed: ${simulation.seed}
+#
+#   fronthaul:
+#   channel_model_a2g: 0
+#   channel_model_g2g: 0
+#   frequency_hz_a2g: 2020000000.0
+#   frequency_hz_g2g: 2000000000.0
+#   tx_power_dbm_a2g: -6.9897000433601875
+#   tx_power_dbm_g2g: 46.0
+#   user_bandwidth_hz: 500000.0
+#   drone_bandwidth_hz: 20000000.0
+#   noise_spectral_density_dbm_per_hz: -174.0
+#   sinr_threshold_db: 25.0
+#   coverage_history_window: 100
+#   channel:
+#     env_type: Urban
+#     default_ue_height_m: 1.5
+#     default_bs_height_m: 25.0
+#     default_uav_height_m: 50.0
+#     plos:
+#       env_profiles:
+#         Suburban: [0.1, 750.0, 8.0]
+#         Urban: [0.3, 500.0, 15.0]
+#         Dense Urban: [0.5, 300.0, 20.0]
+#         Highrise Urban: [0.5, 300.0, 50.0]
+#       avg_loss_profiles:
+#         Suburban:
+#           - [700000000.0, 100000000.0, 0.0, 18.0]
+#           - [2000000000.0, 250000000.0, 0.1, 21.0]
+#           - [5800000000.0, 1000000000.0, 0.2, 24.0]
+#         Urban:
+#           - [700000000.0, 100000000.0, 0.6, 17.0]
+#           - [2000000000.0, 250000000.0, 1.0, 20.0]
+#           - [5800000000.0, 1000000000.0, 1.2, 23.0]
+#         Dense Urban:
+#           - [700000000.0, 100000000.0, 1.0, 20.0]
+#           - [2000000000.0, 250000000.0, 1.6, 23.0]
+#           - [5800000000.0, 1000000000.0, 1.8, 23.0]
+#         Highrise Urban:
+#           - [700000000.0, 100000000.0, 1.5, 29.0]
+#           - [2000000000.0, 250000000.0, 2.4, 34.0]
+#           - [5800000000.0, 1000000000.0, 2.5, 41.0]
+#     uma:
+#       effective_env_height_mode: expected
+#       enable_shadowing: false
+#       shadowing_los_db: 4.0
+#       shadowing_nlos_db: 6.0
+#
+#   backhaul:
+#   channel_model: 0
+#   fso:
+#     rx_diameter_m: 0.2
+#     divergence_angle_rad: 0.06
+#     rx_responsivity: 0.5
+#     avg_gml: 3.0
+#     weather_coeff_per_m: 0.00043
+#     power_split_ratio: 0.005
+#     energy_harvesting_efficiency: 0.2
+#     tx_power_w: 380.0
+#     bandwidth_hz: 1000000000.0
+#     noise_variance_w: 8.0e-10
+#     noise_power_w: 1.0e-06
+#     empirical_snr_losses_lin: 31.622776601683793
+#     beamwaist_radius_m: 0.0025
+#     wavelength_m: 1.55e-06
+#     fixed_orientation: true
+#   mmwave:
+#     frequency_hz: 38000000000.0
+#     reference_distance_m: 5.0
+#     path_loss_exponent: 2.13
+#     efficiency: 1.0
+#     bandwidth_hz: 400000000.0
+#     tx_power_w: 1.0
+#     noise_power_w: 1.0e-09
+#
+#   uav_battery:
+#   mass_kg: 4.0
+#   propeller_radius_m: 0.25
+#   number_of_propellers: 4
+#   air_density_kg_m3: 1.225
+#   gravitation_acceleration_m_s2: 9.80665
+#   profile_drag_coefficient: 0.08
+#   starting_energy_j: 799200.0
+#   max_energy_j: 799200.0
+#   min_energy_j: 0.0
+#   critical_energy_j: 39600.0
+#   travel_speed_m_s: 13.0
+#   skip_energy_update: false
+#   skip_energy_charge: true
+#
+# metrics:
+#   enabled: true
+#   buffer_size: 1000
+#   save_dir: ./outputs/metrics
