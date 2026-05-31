@@ -1,0 +1,3 @@
+enabled: true
+uav_trace_enabled: false
+uav_trace_max_length: 50

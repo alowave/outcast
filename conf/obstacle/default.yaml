@@ -1,0 +1,4 @@
+enabled: true
+map_title: Poznan
+boundary_margin: 20  # Extra margin around obstacles for calculating map boundaries
+default_height: 50.0  # Default height of obstacles if not specified in the map

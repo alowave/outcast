@@ -1,0 +1,11 @@
+n_ues: 200
+n_uavs: 20
+n_bss: 5
+env_boundary:
+  - 1000.0  # X boundary size
+  - 1000.0  # Y boundary size
+min_height_uav: 50.0
+max_height_uav: 100.0
+ue_height: 1.5
+bs_height: 25.0
+user_model: null  # Optional user movement model

@@ -1,0 +1,13 @@
+mass_kg: 4.0  # UAV mass in kg
+propeller_radius_m: 0.25
+number_of_propellers: 4
+air_density_kg_m3: 1.225
+gravitation_acceleration_m_s2: 9.80665
+profile_drag_coefficient: 0.08
+starting_energy_j: 799200.0  # Initial battery energy in Joules
+max_energy_j: 799200.0  # Maximum battery capacity in Joules
+min_energy_j: 0.0  # Minimum battery energy in Joules
+critical_energy_j: 39600.0  # Critical energy threshold in Joules
+travel_speed_m_s: 13.0  # UAV travel speed in m/s
+skip_energy_update: false  # If true, UAV battery does not deplete
+skip_energy_charge: true  # If true, UAV battery does not charge

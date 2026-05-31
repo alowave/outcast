@@ -1,0 +1,25 @@
+channel_model: 0  # 0 - FSO, 1 - mmWave
+fso:
+  rx_diameter_m: 0.2  # Receiver diameter in meters
+  divergence_angle_rad: 0.06  # Beam divergence angle in radians
+  rx_responsivity: 0.5  # Receiver responsivity
+  avg_gml: 3.0  # Average Geometric Loss
+  weather_coeff_per_m: 0.00043  # Weather attenuation coefficient per meter
+  power_split_ratio: 0.005  # Ratio of power split for energy harvesting
+  energy_harvesting_efficiency: 0.2  # Efficiency of energy harvesting
+  tx_power_w: 380.0
+  bandwidth_hz: 1000000000.0
+  noise_variance_w: 8.0e-10
+  noise_power_w: 1.0e-06
+  empirical_snr_losses_lin: 31.622776601683793  # Empirical SNR losses in linear scale
+  beamwaist_radius_m: 0.0025  # Beam waist radius in meters
+  wavelength_m: 1.55e-06  # Wavelength in meters
+  fixed_orientation: true  # Whether orientation is fixed
+mmwave:
+  frequency_hz: 38000000000.0
+  reference_distance_m: 5.0
+  path_loss_exponent: 2.13
+  efficiency: 1.0
+  bandwidth_hz: 400000000.0
+  tx_power_w: 1.0
+  noise_power_w: 1.0e-09
