@@ -2,7 +2,7 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
-![Build Status](https://github.com/alowave/UAV-SIM/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/alowave/outcast/actions/workflows/ci.yml/badge.svg)
 ![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
 
 <img src="./docs/assets/demo.gif" align="right" alt="UAV-SIM Simulation Running" width="42%" style="margin-left: 25px; margin-bottom: 20px;">
