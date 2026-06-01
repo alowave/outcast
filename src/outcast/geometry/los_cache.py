@@ -20,12 +20,12 @@ from typing import TYPE_CHECKING
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.geometry.visibility_ctrl import VisibilityGraphCtrl
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.geometry.visibility_ctrl import VisibilityGraphCtrl
+from src.outcast.world.world_state import WorldStateCfg
 
 if TYPE_CHECKING:
-    from src.uavnetsim.geometry.obstacle import Obstacle
-    from src.uavnetsim.geometry.visibility_graph import VisGraph
+    from src.outcast.geometry.obstacle import Obstacle
+    from src.outcast.geometry.visibility_graph import VisGraph
 
 
 @dataclass(slots=True)

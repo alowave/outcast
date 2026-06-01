@@ -1,11 +1,11 @@
 import numpy as np
 import pytest
 
-from src.uavnetsim.fronthaul.fh_layer import FHLayer, FHLayerCfg
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-from src.uavnetsim.utils.math_tools import db2lin
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.fronthaul.fh_layer import FHLayer, FHLayerCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+from src.outcast.utils.math_tools import db2lin
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def test_fh_layer_1():

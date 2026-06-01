@@ -5,13 +5,13 @@ from pyqtgraph.Qt import QtGui
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
-from src.uavnetsim.geometry.obstacle import Obstacle
-from src.uavnetsim.world.plotting.plot_ctrl import (
+from src.outcast.geometry.obstacle import Obstacle
+from src.outcast.world.plotting.plot_ctrl import (
     PlotCfg,
     PlotController,
     make_drone_symbol,
 )
-from src.uavnetsim.world.world_state import WorldState
+from src.outcast.world.world_state import WorldState
 
 
 def test_make_drone_symbol_builds_qpainter_path():

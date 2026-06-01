@@ -9,8 +9,8 @@ from __future__ import annotations
 
 from typing import Iterable, Sequence
 
-from src.uavnetsim.geometry.obstacle import Obstacle
-from src.uavnetsim.geometry.visibility_graph import Point, VisGraph
+from src.outcast.geometry.obstacle import Obstacle
+from src.outcast.geometry.visibility_graph import Point, VisGraph
 
 Coord = Sequence[float]
 

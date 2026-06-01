@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 
 def test_world_controller_randomize_positions_matches_split_randomizers():

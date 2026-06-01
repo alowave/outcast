@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world import BaseUavController
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world import BaseUavController
 
 
 class DummyUavController(BaseUavController):

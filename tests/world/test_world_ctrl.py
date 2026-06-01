@@ -5,20 +5,20 @@ import numpy as np
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.uav_ctrl import (
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.uav_ctrl import (
     DroneStation,
     StaticUavController,
     UavGraphController,
 )
-from src.uavnetsim.world.user_model.random_movement import (
+from src.outcast.world.user_model.random_movement import (
     RandomMovementCfg,
     RandomMovementUserModel,
 )
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 
 def test_world_controller_uses_obstacle_boundaries_for_world_env_boundary():
@@ -26,10 +26,10 @@ def test_world_controller_uses_obstacle_boundaries_for_world_env_boundary():
 
     with (
         patch(
-            "src.uavnetsim.world.world_ctrl.ObstacleController.load_obstacles"
+            "src.outcast.world.world_ctrl.ObstacleController.load_obstacles"
         ) as load_obstacles,
         patch(
-            "src.uavnetsim.world.world_ctrl.ObstacleController.get_boundaries",
+            "src.outcast.world.world_ctrl.ObstacleController.get_boundaries",
             return_value=[[5.0, 400.0], [7.0, 900.0]],
         ),
     ):

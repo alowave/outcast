@@ -9,7 +9,7 @@ from __future__ import annotations
 import numpy as np
 from shapely.geometry import Point, Polygon
 
-from src.uavnetsim.geometry.coords import Coords3d
+from src.outcast.geometry.coords import Coords3d
 
 
 class Obstacle:

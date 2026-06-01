@@ -13,11 +13,11 @@ from typing import TYPE_CHECKING
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.user_model.base import UserModel
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.user_model.base import UserModel
 
 if TYPE_CHECKING:
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.world.world_state import WorldStateCfg
 
 
 @dataclass(slots=True)

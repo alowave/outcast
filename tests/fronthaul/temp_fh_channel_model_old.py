@@ -15,9 +15,9 @@ from numpy.typing import NDArray
 from scipy.constants import speed_of_light
 from scipy.optimize import brentq, fsolve
 
-from src.uavnetsim.fronthaul.fh_config import FHChannelCfg, FHLayerCfg
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.utils.math_tools import db2lin, lin2db
+from src.outcast.fronthaul.fh_config import FHChannelCfg, FHLayerCfg
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.utils.math_tools import db2lin, lin2db
 
 
 class PlosModel:

@@ -1,6 +1,6 @@
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def test_link_layer_1():

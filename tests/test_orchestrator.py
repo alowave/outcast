@@ -5,18 +5,18 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from src.uavnetsim.backhaul.bh_config import BHLayerCfg
-from src.uavnetsim.config.simulation_config import (
+from src.outcast.backhaul.bh_config import BHLayerCfg
+from src.outcast.config.simulation_config import (
     MetricsControllerCfg,
     OrchestratorCfg,
     SimulationCfg,
 )
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg
-from src.uavnetsim.orchestrator import SCENARIO_REGISTRY, Orchestrator
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg
+from src.outcast.orchestrator import SCENARIO_REGISTRY, Orchestrator
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def _build_tiny_world(plot_enabled: bool, seed: int) -> WorldController:

@@ -13,13 +13,13 @@ import time
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.uav_ctrl import DroneStation, UavGraphController
-from src.uavnetsim.world.user_model.base import UserModel
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.uav_ctrl import DroneStation, UavGraphController
+from src.outcast.world.user_model.base import UserModel
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 GOLDEN_ANGLE_DEG = 137.508
 GOLDEN_PETAL_TRACE_COLORS = [

@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.world.world_state import WorldState
+from src.outcast.world.world_state import WorldState
 
 
 @dataclass(slots=True)

@@ -9,20 +9,20 @@ from __future__ import annotations
 
 from hydra.core.config_store import ConfigStore
 
-from src.uavnetsim.backhaul.bh_config import BHLayerCfg
-from src.uavnetsim.config.simulation_config import (
+from src.outcast.backhaul.bh_config import BHLayerCfg
+from src.outcast.config.simulation_config import (
     MetricsControllerCfg,
     OrchestratorCfg,
     SimulationCfg,
 )
-from src.uavnetsim.fronthaul.fh_config import FHLayerCfg
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg
-from src.uavnetsim.world.energy_model.uav_battery import BatteryCfg
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.user_model.load_ctrl import LoadCfg
-from src.uavnetsim.world.user_model.random_movement import RandomMovementCfg
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.fronthaul.fh_config import FHLayerCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg
+from src.outcast.world.energy_model.uav_battery import BatteryCfg
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.user_model.load_ctrl import LoadCfg
+from src.outcast.world.user_model.random_movement import RandomMovementCfg
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def register_configs() -> None:

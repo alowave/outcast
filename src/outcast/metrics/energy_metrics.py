@@ -12,8 +12,8 @@ from typing import Dict, Sequence
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.metrics.base import BaseMetricsController, MetricValue
-from src.uavnetsim.world.energy_model.uav_battery import Battery
+from src.outcast.metrics.base import BaseMetricsController, MetricValue
+from src.outcast.world.energy_model.uav_battery import Battery
 
 
 class EnergyMetricsController(BaseMetricsController):

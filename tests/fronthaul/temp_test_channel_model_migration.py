@@ -5,7 +5,7 @@ from numpy.testing import assert_allclose
 from temp_fh_channel_model_old import PlosModel as OldModel
 
 # Import the new refactored manager
-from src.uavnetsim.fronthaul.fh_channel_model_manager import (
+from src.outcast.fronthaul.fh_channel_model_manager import (
     FHPathLossModelManager as NewModelManager,
 )
 

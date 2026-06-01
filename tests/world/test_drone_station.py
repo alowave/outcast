@@ -1,16 +1,16 @@
 import numpy as np
 import pytest
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.utils.math_tools import db2lin
-from src.uavnetsim.world import (
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.utils.math_tools import db2lin
+from src.outcast.world import (
     DroneStation,
     DroneStationController,
     GoldenPetalGraphUavController,
     SquareGraphUavController,
     UavGraphController,
 )
-from src.uavnetsim.world.energy_model.uav_battery import BatteryCfg
+from src.outcast.world.energy_model.uav_battery import BatteryCfg
 
 
 def test_controller_sets_station_tx_power_from_dbm():

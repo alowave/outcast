@@ -12,9 +12,9 @@ please refer to the documentation in:
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.fronthaul.fh_config import FHChannelCfg, FHLayerCfg
-from src.uavnetsim.fronthaul.models.model_3gpp import UMaModel
-from src.uavnetsim.fronthaul.models.model_simple_plos import PlosModel
+from src.outcast.fronthaul.fh_config import FHChannelCfg, FHLayerCfg
+from src.outcast.fronthaul.models.model_3gpp import UMaModel
+from src.outcast.fronthaul.models.model_simple_plos import PlosModel
 
 
 class FHPathLossModelManager:

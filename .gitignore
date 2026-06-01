@@ -209,5 +209,5 @@ __marimo__/
 
 # OS generated files
 .DS_Store
-src/uavnetsim/world/user_model/obstacle_mobility_saved
-src/uavnetsim/outputs
+src/outcast/world/user_model/obstacle_mobility_saved
+src/outcast/outputs

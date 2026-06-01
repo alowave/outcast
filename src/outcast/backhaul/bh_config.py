@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from src.uavnetsim.utils.math_tools import db2lin
+from src.outcast.utils.math_tools import db2lin
 
 
 @dataclass(slots=True)

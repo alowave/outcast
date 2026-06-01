@@ -14,8 +14,8 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui, QtWidgets
 
-from src.uavnetsim.geometry.obstacle import Obstacle
-from src.uavnetsim.world.world_state import WorldState
+from src.outcast.geometry.obstacle import Obstacle
+from src.outcast.world.world_state import WorldState
 
 
 def make_drone_symbol() -> QtGui.QPainterPath:

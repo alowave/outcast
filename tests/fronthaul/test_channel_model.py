@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from src.uavnetsim.fronthaul.fh_channel_model_manager import FHPathLossModelManager
-from src.uavnetsim.fronthaul.fh_config import FHChannelCfg
+from src.outcast.fronthaul.fh_channel_model_manager import FHPathLossModelManager
+from src.outcast.fronthaul.fh_config import FHChannelCfg
 
 
 def test_manual_validation_path_loss():

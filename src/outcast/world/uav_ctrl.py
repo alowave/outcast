@@ -18,9 +18,9 @@ from collections.abc import Iterable
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.utils.math_tools import db2lin
-from src.uavnetsim.world.energy_model.uav_battery import Battery, BatteryCfg
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.utils.math_tools import db2lin
+from src.outcast.world.energy_model.uav_battery import Battery, BatteryCfg
 
 
 class BaseUavController(ABC):

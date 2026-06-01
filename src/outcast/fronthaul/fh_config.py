@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from src.uavnetsim.utils.math_tools import db2lin, lin2db, w_to_dbm
+from src.outcast.utils.math_tools import db2lin, lin2db, w_to_dbm
 
 
 def default_env_profiles() -> dict[str, list[float]]:

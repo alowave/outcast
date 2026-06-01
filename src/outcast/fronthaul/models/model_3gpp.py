@@ -4,7 +4,7 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.constants import speed_of_light
 
-from src.uavnetsim.fronthaul.fh_config import FHChannelCfg
+from src.outcast.fronthaul.fh_config import FHChannelCfg
 
 
 class UMaModel:

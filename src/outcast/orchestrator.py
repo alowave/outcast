@@ -34,20 +34,20 @@ from scenarios.scenario_1 import build_square_uav_world
 from scenarios.scenario_2 import (
     build_golden_petal_uav_world as build_scenario_2_world,
 )
-from src.uavnetsim.backhaul.bh_ctrl import BHController
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.config.hydra_registry import register_configs
-from src.uavnetsim.config.simulation_config import (
+from src.outcast.backhaul.bh_ctrl import BHController
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.config.hydra_registry import register_configs
+from src.outcast.config.simulation_config import (
     MetricsControllerCfg,
     OrchestratorCfg,
     build_orchestrator_cfg,
 )
-from src.uavnetsim.fronthaul.fh_layer import FHLayer
-from src.uavnetsim.link_layer.mock_link_layer import MockLinkLayer
-from src.uavnetsim.metrics.backhaul_metrics import BackhaulMetricsController
-from src.uavnetsim.metrics.energy_metrics import EnergyMetricsController
-from src.uavnetsim.metrics.fronthaul_metrics import FronthaulMetricsController
-from src.uavnetsim.world.world_ctrl import WorldController
+from src.outcast.fronthaul.fh_layer import FHLayer
+from src.outcast.link_layer.mock_link_layer import MockLinkLayer
+from src.outcast.metrics.backhaul_metrics import BackhaulMetricsController
+from src.outcast.metrics.energy_metrics import EnergyMetricsController
+from src.outcast.metrics.fronthaul_metrics import FronthaulMetricsController
+from src.outcast.world.world_ctrl import WorldController
 
 ScenarioBuilder = Callable[[bool, int], WorldController]
 
@@ -139,7 +139,7 @@ class Orchestrator:
         if obstacles is None and hasattr(self.world_ctrl, "obstacle_ctrl"):
             obstacles = self.world_ctrl.obstacle_ctrl.obstacles_list
         if obstacles:
-            from src.uavnetsim.geometry.los_cache import LosCacheCfg
+            from src.outcast.geometry.los_cache import LosCacheCfg
 
             los_cfg = LosCacheCfg(sector_size_m=self.sim_cfg.los_cache.sector_size_m)
             self.link_layer.set_los_cache(los_cfg, obstacles)

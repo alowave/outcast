@@ -12,8 +12,8 @@ from typing import Dict
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.fronthaul.fh_layer import FHLayer
-from src.uavnetsim.metrics.base import BaseMetricsController, MetricValue
+from src.outcast.fronthaul.fh_layer import FHLayer
+from src.outcast.metrics.base import BaseMetricsController, MetricValue
 
 
 class FronthaulMetricsController(BaseMetricsController):

@@ -1,9 +1,9 @@
 import numpy as np
 
-from src.uavnetsim.backhaul.bh_config import BHLayerCfg
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.backhaul.bh_config import BHLayerCfg
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 
 def test_bh_precalculated_case():

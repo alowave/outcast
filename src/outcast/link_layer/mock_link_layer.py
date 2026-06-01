@@ -13,12 +13,12 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from src.uavnetsim.geometry.los_cache import LosCacheCfg, LosSectorCache
-from src.uavnetsim.link_layer.link_data import AccessLinkData, BackhaulLinkData
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.geometry.los_cache import LosCacheCfg, LosSectorCache
+from src.outcast.link_layer.link_data import AccessLinkData, BackhaulLinkData
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 if TYPE_CHECKING:
-    from src.uavnetsim.geometry.obstacle import Obstacle
+    from src.outcast.geometry.obstacle import Obstacle
 
 
 @dataclass(slots=True)

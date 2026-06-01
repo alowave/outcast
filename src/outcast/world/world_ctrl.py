@@ -9,19 +9,19 @@ from __future__ import annotations
 
 import numpy as np
 
-from src.uavnetsim.world.environment_geometry.obstacles import (
+from src.outcast.world.environment_geometry.obstacles import (
     ObstacleCfg,
     ObstacleController,
 )
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg, PlotController
-from src.uavnetsim.world.uav_ctrl import BaseUavController, StaticUavController
-from src.uavnetsim.world.user_model.base import UserModel
-from src.uavnetsim.world.user_model.load_ctrl import LoadCfg, LoadController
-from src.uavnetsim.world.user_model.obstacle_mobility_model import (
+from src.outcast.world.plotting.plot_ctrl import PlotCfg, PlotController
+from src.outcast.world.uav_ctrl import BaseUavController, StaticUavController
+from src.outcast.world.user_model.base import UserModel
+from src.outcast.world.user_model.load_ctrl import LoadCfg, LoadController
+from src.outcast.world.user_model.obstacle_mobility_model import (
     ObstacleMobilityUserModel,
 )
-from src.uavnetsim.world.user_model.random_movement import RandomMovementUserModel
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.world.user_model.random_movement import RandomMovementUserModel
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 
 class WorldController:
@@ -130,7 +130,7 @@ class WorldController:
         if self.world_cfg.user_model == "obstacle_mobility":
             m_cfg = self.world_cfg.mobility
             if m_cfg is None:
-                from src.uavnetsim.world.user_model.obstacle_mobility_model import (
+                from src.outcast.world.user_model.obstacle_mobility_model import (
                     ObstacleMobilityCfg,
                 )
 
@@ -150,7 +150,7 @@ class WorldController:
             return RandomMovementUserModel(self.world_cfg, rng=self.rng)
 
         if self.world_cfg.user_model == "static_thomas_cluster":
-            from src.uavnetsim.world.user_model.user_static_model import (
+            from src.outcast.world.user_model.user_static_model import (
                 StaticThomasClusterModel,
             )
 
