@@ -11,9 +11,9 @@ from pathlib import Path
 
 import numpy as np
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.user_model.base import UserModel
-from src.uavnetsim.world.user_model.paths import build_voronoi_graph
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.user_model.base import UserModel
+from src.outcast.world.user_model.paths import build_voronoi_graph
 
 
 @dataclass(slots=True)

@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from src.uavnetsim.utils.math_tools import wh_to_joules
+from src.outcast.utils.math_tools import wh_to_joules
 
 
 @dataclass(slots=True)

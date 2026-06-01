@@ -14,8 +14,8 @@ from numpy.typing import NDArray
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import shortest_path
 
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.metrics.base import BaseMetricsController, MetricValue
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.metrics.base import BaseMetricsController, MetricValue
 
 
 class BackhaulMetricsController(BaseMetricsController):

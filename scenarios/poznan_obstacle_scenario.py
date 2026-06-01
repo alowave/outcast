@@ -10,18 +10,18 @@ import time
 
 import numpy as np
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.environment_geometry.obstacles import (
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.environment_geometry.obstacles import (
     ObstacleCfg,
 )
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.uav_ctrl import DroneStation, UavGraphController
-from src.uavnetsim.world.user_model.obstacle_mobility_model import (
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.uav_ctrl import DroneStation, UavGraphController
+from src.outcast.world.user_model.obstacle_mobility_model import (
     ObstacleMobilityCfg,
     ObstacleMobilityUserModel,
 )
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def build_poznan_scenario(plot_enabled: bool = True) -> WorldController:

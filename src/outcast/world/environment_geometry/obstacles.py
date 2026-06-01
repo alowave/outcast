@@ -12,8 +12,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.geometry.obstacle import Obstacle
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.geometry.obstacle import Obstacle
 
 
 @dataclass(slots=True)

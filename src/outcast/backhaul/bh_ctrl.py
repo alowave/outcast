@@ -5,8 +5,8 @@ from collections import deque
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.link_layer.link_data import BackhaulLinkData
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.link_layer.link_data import BackhaulLinkData
 
 
 class BHController:

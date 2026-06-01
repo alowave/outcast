@@ -5,18 +5,18 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.fronthaul.fh_layer import FHLayer, FHLayerCfg
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-from src.uavnetsim.metrics.backhaul_metrics import BackhaulMetricsController
-from src.uavnetsim.metrics.base import MetricsControllerCfg
-from src.uavnetsim.metrics.energy_metrics import EnergyMetricsController
-from src.uavnetsim.metrics.fronthaul_metrics import FronthaulMetricsController
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.uav_ctrl import DroneStationController
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.fronthaul.fh_layer import FHLayer, FHLayerCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+from src.outcast.metrics.backhaul_metrics import BackhaulMetricsController
+from src.outcast.metrics.base import MetricsControllerCfg
+from src.outcast.metrics.energy_metrics import EnergyMetricsController
+from src.outcast.metrics.fronthaul_metrics import FronthaulMetricsController
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.uav_ctrl import DroneStationController
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 @pytest.mark.parametrize("time_steps", [5])

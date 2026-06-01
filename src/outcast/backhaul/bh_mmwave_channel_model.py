@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from src.uavnetsim.backhaul.bh_config import BHMmWaveChannelCfg
+from src.outcast.backhaul.bh_config import BHMmWaveChannelCfg
 
 
 class MmWaveModel:

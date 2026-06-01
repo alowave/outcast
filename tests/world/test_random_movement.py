@@ -1,10 +1,10 @@
 import numpy as np
 
-from src.uavnetsim.world.user_model.random_movement import (
+from src.outcast.world.user_model.random_movement import (
     RandomMovementCfg,
     RandomMovementUserModel,
 )
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def test_random_movement_step_applies_bounded_offset_and_clips_to_boundary():

@@ -3,10 +3,10 @@ from pathlib import Path
 import numpy as np
 from numpy.testing import assert_allclose
 
-from src.uavnetsim.fronthaul.fh_layer import FHLayer, FHLayerCfg
-from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.fronthaul.fh_layer import FHLayer, FHLayerCfg
+from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 DATA_DIR = Path(__file__).parent / "legacy_reference"
 

@@ -16,7 +16,7 @@ The core platform framework targets highly dynamic link budgets, spatial geometr
 The primary entry point for the simulation is the `Orchestrator`. You can run it using:
 
 ```bash
-python -m src.uavnetsim.orchestrator
+python -m src.outcast.orchestrator
 ```
 
 ## Configuration
@@ -32,15 +32,15 @@ Default settings are organized in the `conf/` directory:
 You can override any configuration parameter directly from the CLI. Examples:
 ```bash
 # Change the scenario and number of steps
-python -m src.uavnetsim.orchestrator scenario_name=scenario_1 total_steps=500
+python -m src.outcast.orchestrator scenario_name=scenario_1 total_steps=500
 
 # Change a nested parameter (e.g., UAV battery mass)
-python -m src.uavnetsim.orchestrator simulation.uav_battery.mass_kg=5.0
+python -m src.outcast.orchestrator simulation.uav_battery.mass_kg=5.0
 ```
 
 ### Local Development Overrides
-For quick iteration without changing YAML files or typing long CLI commands, you can use the local override mechanism in `src/uavnetsim/orchestrator.py`:
-1. Open `src/uavnetsim/orchestrator.py`.
+For quick iteration without changing YAML files or typing long CLI commands, you can use the local override mechanism in `src/outcast/orchestrator.py`:
+1. Open `src/outcast/orchestrator.py`.
 2. Set `USE_LOCAL_OVERRIDES = True`.
 3. Modify the values within the `_apply_local_overrides(cfg: OrchestratorCfg)` function.
 

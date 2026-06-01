@@ -1,5 +1,5 @@
 """
-Tests for src.uavnetsim.geometry.los_cache
+Tests for src.outcast.geometry.los_cache
 ==========================================
 
 Coverage
@@ -20,11 +20,11 @@ import math
 
 import numpy as np
 
-from src.uavnetsim.geometry.los_cache import (
+from src.outcast.geometry.los_cache import (
     LosCacheCfg,
     LosSectorCache,
 )
-from src.uavnetsim.geometry.obstacle import Obstacle
+from src.outcast.geometry.obstacle import Obstacle
 
 # ---------------------------------------------------------------------------
 # Shared test geometry
@@ -321,9 +321,9 @@ def test_compute_los_mask_multiple_sources_and_targets():
 def test_mock_link_layer_without_cache_uses_random_los():
     """Without set_los_cache(), the LOS arrays must be filled (not all one value)
     on average across many seeds — but the key property is they are bool arrays."""
-    from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-    from src.uavnetsim.world.world_ctrl import WorldController
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+    from src.outcast.world.world_ctrl import WorldController
+    from src.outcast.world.world_state import WorldStateCfg
 
     world_cfg = WorldStateCfg(n_ues=10, n_uavs=3, n_bss=2)
     ws = WorldController(world_cfg=world_cfg).state
@@ -342,9 +342,9 @@ def test_mock_link_layer_without_cache_uses_random_los():
 def test_mock_link_layer_with_cache_produces_deterministic_los():
     """set_los_cache() makes LOS deterministic: two update() calls with the
     same world state must yield identical LOS arrays."""
-    from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-    from src.uavnetsim.world.world_ctrl import WorldController
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+    from src.outcast.world.world_ctrl import WorldController
+    from src.outcast.world.world_state import WorldStateCfg
 
     world_cfg = WorldStateCfg(n_ues=8, n_uavs=2, n_bss=1)
     ws = WorldController(world_cfg=world_cfg).state
@@ -369,9 +369,9 @@ def test_mock_link_layer_with_cache_produces_deterministic_los():
 
 
 def test_mock_link_layer_with_cache_shapes():
-    from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-    from src.uavnetsim.world.world_ctrl import WorldController
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+    from src.outcast.world.world_ctrl import WorldController
+    from src.outcast.world.world_state import WorldStateCfg
 
     world_cfg = WorldStateCfg(n_ues=6, n_uavs=3, n_bss=2)
     ws = WorldController(world_cfg=world_cfg).state
@@ -391,9 +391,9 @@ def test_mock_link_layer_with_cache_shapes():
 
 def test_mock_link_layer_cache_open_field_all_los():
     """With no obstacles all LoS entries must be True."""
-    from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-    from src.uavnetsim.world.world_ctrl import WorldController
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+    from src.outcast.world.world_ctrl import WorldController
+    from src.outcast.world.world_state import WorldStateCfg
 
     world_cfg = WorldStateCfg(n_ues=5, n_uavs=2, n_bss=1)
     ws = WorldController(world_cfg=world_cfg).state
@@ -412,9 +412,9 @@ def test_mock_link_layer_cache_open_field_all_los():
 
 def test_mock_link_layer_set_cache_then_reset_then_update():
     """Calling reset() between updates clears the cache but compute still works."""
-    from src.uavnetsim.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
-    from src.uavnetsim.world.world_ctrl import WorldController
-    from src.uavnetsim.world.world_state import WorldStateCfg
+    from src.outcast.link_layer.mock_link_layer import LinkLayerCfg, MockLinkLayer
+    from src.outcast.world.world_ctrl import WorldController
+    from src.outcast.world.world_state import WorldStateCfg
 
     world_cfg = WorldStateCfg(n_ues=4, n_uavs=2, n_bss=1)
     ws = WorldController(world_cfg=world_cfg).state

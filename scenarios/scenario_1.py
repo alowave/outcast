@@ -15,12 +15,12 @@ import time
 
 import numpy as np
 
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg
-from src.uavnetsim.world.uav_ctrl import SquareGraphUavController
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg
+from src.outcast.world.uav_ctrl import SquareGraphUavController
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 FIERY_UAV_TRACE_COLORS = [
     (255, 160, 0),

@@ -17,9 +17,9 @@ from math import erf
 
 import numpy as np
 
-from src.uavnetsim.backhaul.bh_config import BHFsoChannelCfg
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.utils.math_tools import lin2db
+from src.outcast.backhaul.bh_config import BHFsoChannelCfg
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.utils.math_tools import lin2db
 
 
 class StatisticalModel:

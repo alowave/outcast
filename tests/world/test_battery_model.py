@@ -1,6 +1,6 @@
 import pytest
 
-from src.uavnetsim.world.energy_model.uav_battery import Battery, BatteryCfg
+from src.outcast.world.energy_model.uav_battery import Battery, BatteryCfg
 
 
 def test_battery_implements_battery_api():

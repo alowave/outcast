@@ -5,12 +5,12 @@ from __future__ import annotations
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.fronthaul.fh_channel_data import FHChannelData
-from src.uavnetsim.fronthaul.fh_channel_model_manager import FHPathLossModelManager
-from src.uavnetsim.fronthaul.fh_config import FHLayerCfg
-from src.uavnetsim.link_layer.link_data import AccessLinkData
-from src.uavnetsim.utils.math_tools import db2lin
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.fronthaul.fh_channel_data import FHChannelData
+from src.outcast.fronthaul.fh_channel_model_manager import FHPathLossModelManager
+from src.outcast.fronthaul.fh_config import FHLayerCfg
+from src.outcast.link_layer.link_data import AccessLinkData
+from src.outcast.utils.math_tools import db2lin
+from src.outcast.world.world_state import WorldStateCfg
 
 
 class FHLayer:

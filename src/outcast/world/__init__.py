@@ -1,6 +1,6 @@
-from src.uavnetsim.world.environment_geometry.obstacles import ObstacleCfg
-from src.uavnetsim.world.plotting.plot_ctrl import PlotCfg, PlotController
-from src.uavnetsim.world.uav_ctrl import (
+from src.outcast.world.environment_geometry.obstacles import ObstacleCfg
+from src.outcast.world.plotting.plot_ctrl import PlotCfg, PlotController
+from src.outcast.world.uav_ctrl import (
     BaseUAVController,
     BaseUavController,
     DefaultDroneStationController,
@@ -11,10 +11,10 @@ from src.uavnetsim.world.uav_ctrl import (
     StaticUavController,
     UavGraphController,
 )
-from src.uavnetsim.world.user_model.load_ctrl import LoadCfg
-from src.uavnetsim.world.user_model.random_movement import RandomMovementCfg
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldState, WorldStateCfg
+from src.outcast.world.user_model.load_ctrl import LoadCfg
+from src.outcast.world.user_model.random_movement import RandomMovementCfg
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldState, WorldStateCfg
 
 __all__ = [
     "BaseUAVController",

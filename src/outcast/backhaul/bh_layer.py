@@ -20,14 +20,14 @@ from collections.abc import Iterable
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.backhaul.bh_channel_data import BHChannelData
-from src.uavnetsim.backhaul.bh_config import BHLayerCfg
-from src.uavnetsim.backhaul.bh_fso_channel_model import StatisticalModel
-from src.uavnetsim.backhaul.bh_mmwave_channel_model import MmWaveModel
-from src.uavnetsim.geometry.coords import Coords3d
-from src.uavnetsim.link_layer.link_data import BackhaulLinkData
-from src.uavnetsim.utils.math_tools import lin2db
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.backhaul.bh_channel_data import BHChannelData
+from src.outcast.backhaul.bh_config import BHLayerCfg
+from src.outcast.backhaul.bh_fso_channel_model import StatisticalModel
+from src.outcast.backhaul.bh_mmwave_channel_model import MmWaveModel
+from src.outcast.geometry.coords import Coords3d
+from src.outcast.link_layer.link_data import BackhaulLinkData
+from src.outcast.utils.math_tools import lin2db
+from src.outcast.world.world_state import WorldStateCfg
 
 
 class BHLayer:

@@ -12,7 +12,7 @@ import heapq
 import numpy as np
 from scipy.spatial import Voronoi
 
-from src.uavnetsim.geometry.coords import Coords3d
+from src.outcast.geometry.coords import Coords3d
 
 
 class Graph:

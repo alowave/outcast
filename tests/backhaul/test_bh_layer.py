@@ -1,10 +1,10 @@
 import numpy as np
 
-from src.uavnetsim.backhaul.bh_ctrl import BHController
-from src.uavnetsim.backhaul.bh_layer import BHLayer
-from src.uavnetsim.link_layer.mock_link_layer import MockLinkLayer
-from src.uavnetsim.world.world_ctrl import WorldController
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.backhaul.bh_ctrl import BHController
+from src.outcast.backhaul.bh_layer import BHLayer
+from src.outcast.link_layer.mock_link_layer import MockLinkLayer
+from src.outcast.world.world_ctrl import WorldController
+from src.outcast.world.world_state import WorldStateCfg
 
 
 def test_bh_layer_1():

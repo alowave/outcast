@@ -15,8 +15,8 @@ from typing import Any
 import numpy as np
 from numpy.typing import NDArray
 
-from src.uavnetsim.config.simulation_config import MetricsControllerCfg
-from src.uavnetsim.world.world_state import WorldStateCfg
+from src.outcast.config.simulation_config import MetricsControllerCfg
+from src.outcast.world.world_state import WorldStateCfg
 
 MetricValue = NDArray | np.generic | float | int | bool
 

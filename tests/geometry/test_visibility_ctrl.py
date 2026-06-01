@@ -1,8 +1,8 @@
 import numpy as np
 from shapely.geometry import Point as ShapelyPoint
 
-from src.uavnetsim.geometry.visibility_ctrl import VisibilityGraphCtrl
-from src.uavnetsim.world.environment_geometry.obstacles import (
+from src.outcast.geometry.visibility_ctrl import VisibilityGraphCtrl
+from src.outcast.world.environment_geometry.obstacles import (
     ObstacleCfg,
     ObstacleController,
 )
